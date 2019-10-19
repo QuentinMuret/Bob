@@ -6,24 +6,35 @@ public class GameManager : MonoBehaviour
     bool gameHasEnded = false;
     public GameObject cam;
     public GameObject gameOverUI;
+    public GameObject gameWinUI;
+    public GameObject levelEnd;
 
     void Start()
     {
-        FindObjectOfType<KillPlayer>().OnPlayerDeath += EndGame;
+        FindObjectOfType<KillPlayer>().OnPlayerDeath += LoseGame;
+        FindObjectOfType<EnterZone>().OnPlayerWin += WinGame;
+        BoxCollider2D endCollider = levelEnd.GetComponent<BoxCollider2D>();
     }
-    void EndGame()
+    void LoseGame()
     {
         if (!gameHasEnded)
         {
             gameHasEnded = true;
-            print("GameOver");
             Destroy(cam);
             gameOverUI.SetActive(true);
 
-
-
         }
         
+    }
+
+    void WinGame()
+    {
+        if (!gameHasEnded)
+        {
+            gameHasEnded = true;
+            gameWinUI.SetActive(true);
+        }
+
     }
 
     void Update()
