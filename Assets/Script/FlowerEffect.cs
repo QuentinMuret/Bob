@@ -8,17 +8,22 @@ public class FlowerEffect : MonoBehaviour
     Color color1 = Color.cyan;
     Color color2= Color.red;
 
+    public Sprite normal;
+    public Sprite peur;
+
     private void Start()
     {
-        spriteRenderer.color = color1;
+        
+        spriteRenderer.sprite = normal;
     }
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            spriteRenderer.color = color2;
-            print("ho");
+           
+            spriteRenderer.sprite = peur;
+           
         }
     }
 
@@ -26,8 +31,8 @@ public class FlowerEffect : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            spriteRenderer.color = color1;
-            print("hey");
+            spriteRenderer.sprite = normal;
+            
         }
     }
 }
