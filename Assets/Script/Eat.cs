@@ -10,13 +10,17 @@ public class Eat : MonoBehaviour
    
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.tag == "Eatable")
+        if (collision.CompareTag("Eatable"))
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 objectToEat = collision.gameObject;
                 Invoke("EatObject", 0.5f);
-                characterController.nbFood += 1;
+                if (characterController.nbFood<3)
+                {
+                    characterController.nbFood += 1;
+                }
+                
 
                
             }
