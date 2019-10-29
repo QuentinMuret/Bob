@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
         if ( Input.GetKeyDown(KeyCode.Space))
         {
             jump = true;
-            animator.SetBool("isJumping", true);
+            
             
         }
 
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnLanding()
     {
-        animator.SetBool("isJumping", false);
+        
         
     }
 

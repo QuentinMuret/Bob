@@ -16,7 +16,7 @@ public class Eat : MonoBehaviour
             {
                 objectToEat = collision.gameObject;
                 Invoke("EatObject", 0.5f);
-                if (characterController.nbFood<3)
+                if (characterController.nbFood<4)
                 {
                     characterController.nbFood += 1;
                 }

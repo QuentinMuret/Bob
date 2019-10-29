@@ -21,6 +21,7 @@ public class CharacterController2D : MonoBehaviour
     private Vector3 m_Velocity = Vector3.zero;
 
     public int nbFood = 0;
+    public float transformSize;
 
     [Header("Events")]
     [Space]
@@ -63,6 +64,11 @@ public class CharacterController2D : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        transform.localScale = transform.localScale *(1+ transformSize * Time.deltaTime);
+        
+    }
 
     public void Move(float move, bool crouch, bool jump)
     {
