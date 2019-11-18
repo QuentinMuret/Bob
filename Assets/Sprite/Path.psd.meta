@@ -11,6 +11,24 @@ TextureImporter:
   - first:
       213: 8850629881700986773
     second: Path_2
+  - first:
+      213: -3007694368417408455
+    second: Path_3
+  - first:
+      213: 3769495060631318584
+    second: Path_4
+  - first:
+      213: -6938405064267237213
+    second: Path_5
+  - first:
+      213: 7266865235460105783
+    second: Path_6
+  - first:
+      213: 255543117579527574
+    second: Path_7
+  - first:
+      213: 7880820301149678448
+    second: Path_8
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -98,18 +116,18 @@ TextureImporter:
       name: Path_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 354
-        width: 800
-        height: 97
-      alignment: 9
-      pivot: {x: 0.4967079, y: 0.1606008}
+        x: 11
+        y: 663
+        width: 93
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84f099fab9025c84d95ebda13bfe1c75
+      spriteID: b77b69d639a9be746965c5a73505d013
       internalID: -5908327983602914153
       vertices: []
       indices: 
@@ -119,18 +137,18 @@ TextureImporter:
       name: Path_1
       rect:
         serializedVersion: 2
-        x: 12
-        y: 84
-        width: 699
-        height: 111
+        x: 46
+        y: 669
+        width: 70
+        height: 112
       alignment: 9
-      pivot: {x: 0.49811608, y: 0.07290643}
+      pivot: {x: -0.012116909, y: 0.0017249305}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d66bbd55d2e6dd844b150dc606f59e59
+      spriteID: f39e3f8b611c7244ea795fa8cffc3afa
       internalID: 5982707618273460844
       vertices: []
       indices: 
@@ -140,19 +158,145 @@ TextureImporter:
       name: Path_2
       rect:
         serializedVersion: 2
-        x: 333
-        y: 589
-        width: 9
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 79
+        y: 669
+        width: 56
+        height: 115
+      alignment: 9
+      pivot: {x: 0.5235156, y: 0.053408947}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e2eb382c190ed749a900961c28c4b99
+      spriteID: c5640a2a5bf39bc44ae7cee11d956a61
       internalID: 8850629881700986773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 707
+        width: 197
+        height: 70
+      alignment: 9
+      pivot: {x: 0.50668484, y: 0.099215746}
+      border: {x: 71, y: 0, z: 43, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747575603e3288548a69fe340c2a61b5
+      internalID: -3007694368417408455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_4
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 687
+        width: 107
+        height: 80
+      alignment: 9
+      pivot: {x: 0.48769313, y: 0.08847885}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2205fb4c9d9daeb4fbe918bcb18d04f2
+      internalID: 3769495060631318584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_5
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 500
+        width: 667
+        height: 45
+      alignment: 9
+      pivot: {x: 0.4881541, y: 0.031781007}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a711b08d6f4b0b44186a80e5837414a9
+      internalID: -6938405064267237213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_6
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 441
+        width: 686
+        height: 53
+      alignment: 9
+      pivot: {x: 0.50000006, y: 0.102455}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ddf75942a5fc94c914806d6efc574d
+      internalID: 7266865235460105783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_7
+      rect:
+        serializedVersion: 2
+        x: 51
+        y: 377
+        width: 705
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.12375189}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21c20377e03a73e4f9cb03f488abaa4b
+      internalID: 255543117579527574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Path_8
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 182
+        width: 789
+        height: 81
+      alignment: 9
+      pivot: {x: 0.49666193, y: -0.03650298}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d73905ce45ab88842ab3f944f3dcf040
+      internalID: 7880820301149678448
       vertices: []
       indices: 
       edges: []
