@@ -36,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("isAttacking", true);
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            print("Interaction");
+        }
+
         
     }
 
@@ -47,7 +52,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        controller.Move(direction*Time.fixedDeltaTime, false, jump);
-        jump = false;
+        if (!controller.isCharging)
+        {
+            controller.Move(direction * Time.fixedDeltaTime, false, jump);
+        }
+            jump = false;
+        
     }
 }

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class CharacterController2D : MonoBehaviour
@@ -22,6 +23,8 @@ public class CharacterController2D : MonoBehaviour
 
     public int nbFood = 0;
     public float transformSize;
+    public float m_ChargingTime = 2f;
+    public bool isCharging = false;
 
     [Header("Events")]
     [Space]
@@ -33,10 +36,15 @@ public class CharacterController2D : MonoBehaviour
 
     public BoolEvent OnCrouchEvent;
     private bool m_wasCrouching = false;
+    public float m_fallspeed = -2f;
+    public float m_defaultChargeForce=8000f;
+    private float m_chargeForce;
 
     private void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
+        m_chargeForce = m_defaultChargeForce;
+        
 
         if (OnLandEvent == null)
             OnLandEvent = new UnityEvent();
@@ -66,8 +74,69 @@ public class CharacterController2D : MonoBehaviour
 
     private void Update()
     {
-        transform.localScale = transform.localScale *(1+ transformSize * Time.deltaTime);
+        transform.localScale = transform.localScale * (1 + transformSize * Time.deltaTime);
+
+        // Capacity smooth fall
+        if (Input.GetKey(KeyCode.S) && m_Rigidbody2D.velocity.y < m_fallspeed)
+        {
+
+            SmoothFall();
+
+        }
+
+        // Capacity Charge
+        if (m_Grounded && Input.GetButtonDown("Fire2"))
+        {
+            isCharging = true;
+            StartCoroutine("PrepCharge");
+        }
         
+
+    }
+
+    IEnumerator PrepCharge()
+    {
+        while(Input.GetButton("Fire2"))
+        {
+            if (m_chargeForce < 4000)
+            {
+                m_chargeForce += 60;
+            }
+            
+            yield return new WaitForSeconds(.1f);
+            print("Charge Force :" + m_chargeForce);
+            
+        }
+
+        Charge();
+        m_chargeForce = m_defaultChargeForce;
+        isCharging = false;
+        print("hey");
+            
+ 
+
+
+    }
+
+    private void Charge()
+    {
+
+
+        //Charge 
+        if (m_FacingRight)
+        {
+            m_Rigidbody2D.AddForce(new Vector2(m_chargeForce, 0f), ForceMode2D.Force);
+        }
+        else
+        {
+            m_Rigidbody2D.AddForce(new Vector2(-m_chargeForce, 0f), ForceMode2D.Force);
+        }
+
+    }
+
+    private void SmoothFall()
+    {
+        m_Rigidbody2D.drag = 10;
     }
 
     public void Move(float move, bool crouch, bool jump)

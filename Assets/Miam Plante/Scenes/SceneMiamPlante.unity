@@ -4912,7 +4912,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LookaheadTime: 0
   m_LookaheadSmoothing: 10
-  m_LookaheadIgnoreY: 1
+  m_LookaheadIgnoreY: 0
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -4924,9 +4924,9 @@ MonoBehaviour:
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 0.33
   m_BiasX: 0
-  m_BiasY: -0.025000086
+  m_BiasY: -0.025000077
   m_CenterOnActivate: 1
   m_GroupFramingMode: 2
   m_AdjustmentMode: 2
@@ -4962,7 +4962,7 @@ MonoBehaviour:
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
+  m_SoftZoneHeight: 0.76
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
@@ -5822,7 +5822,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510236660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.82, y: 0.9167482, z: -38.27}
+  m_LocalPosition: {x: -28.66, y: 1.6967483, z: -38.27}
   m_LocalScale: {x: 0.7849997, y: 0.7849997, z: 0.7849997}
   m_Children:
   - {fileID: 448440197}
@@ -11694,6 +11694,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &1213185432 stripped
+Rigidbody2D:
+  m_CorrespondingSourceObject: {fileID: 2688769559273107324, guid: fc16d2f4857317e43ad080e98333fcb8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2688769559863350053}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1213788059
 GameObject:
   m_ObjectHideFlags: 0
@@ -32594,20 +32600,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snake
       objectReference: {fileID: 0}
-    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
-        type: 3}
-      propertyPath: m_WhatIsGround.m_Bits
-      value: 2048
-      objectReference: {fileID: 0}
     - target: {fileID: 2688769558902059526, guid: fc16d2f4857317e43ad080e98333fcb8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.82
+      value: -28.66
       objectReference: {fileID: 0}
     - target: {fileID: 2688769558902059526, guid: fc16d2f4857317e43ad080e98333fcb8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8
+      value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 2688769558902059526, guid: fc16d2f4857317e43ad080e98333fcb8,
         type: 3}
@@ -32654,6 +32655,81 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107321, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_DrawMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1213185432}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_drag
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_chargeForce
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107326, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_defaultChargeForce
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107327, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: runSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107324, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_Simulated
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107324, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559273107324, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: m_UseAutoMass
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2688769559863350055, guid: fc16d2f4857317e43ad080e98333fcb8,
+        type: 3}
+      propertyPath: terrainLimiteZ
+      value: -5
+      objectReference: {fileID: 0}
     - target: {fileID: 923558539, guid: fc16d2f4857317e43ad080e98333fcb8, type: 3}
       propertyPath: m_Offset.x
       value: 2.8573027
@@ -32661,21 +32737,6 @@ PrefabInstance:
     - target: {fileID: 923558539, guid: fc16d2f4857317e43ad080e98333fcb8, type: 3}
       propertyPath: m_Radius
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2688769559273107321, guid: fc16d2f4857317e43ad080e98333fcb8,
-        type: 3}
-      propertyPath: m_DrawMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2688769559273107327, guid: fc16d2f4857317e43ad080e98333fcb8,
-        type: 3}
-      propertyPath: runSpeed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2688769559863350055, guid: fc16d2f4857317e43ad080e98333fcb8,
-        type: 3}
-      propertyPath: terrainLimiteZ
-      value: -5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fc16d2f4857317e43ad080e98333fcb8, type: 3}
