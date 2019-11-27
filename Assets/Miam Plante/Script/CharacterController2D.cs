@@ -77,7 +77,7 @@ public class CharacterController2D : MonoBehaviour
         transform.localScale = transform.localScale * (1 + transformSize * Time.deltaTime);
 
         // Capacity smooth fall
-        if (Input.GetKey(KeyCode.S) && m_Rigidbody2D.velocity.y < m_fallspeed)
+        if (Input.GetKey(KeyCode.Space) && m_Rigidbody2D.velocity.y < m_fallspeed)
         {
 
             SmoothFall();
